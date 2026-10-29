@@ -1,0 +1,15 @@
+# 运行环境依赖（Python 3.10 已验证）
+# 安装：pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+#
+# 说明：本作业在 Python 3.10.21 下开发测试，torch 2.14.0（CPU 版）可正常运行；
+#       torch 2.0 及以上版本均兼容本代码（没有使用 3.11+ 的新语法）。
+
+torch>=2.0.0          # 深度学习框架（CPU 版即可，有 CUDA 显卡会自动使用 GPU）
+torchvision>=0.15.0   # 数据集接口、图像变换、ImageFolder
+numpy>=1.23           # 数值计算
+pandas>=2.0           # 读取 parquet 格式的原始数据（仅 01 脚本用）
+pyarrow>=14.0         # pandas 读 parquet 需要的引擎（仅 01 脚本用）
+matplotlib>=3.7       # 训练曲线、混淆矩阵、预测可视化
+pillow>=9.5           # 图片读写
+tqdm>=4.65            # 下载进度条（可选）
+python-docx>=1.0      # 生成 Word 验收报告（仅 06 脚本用）

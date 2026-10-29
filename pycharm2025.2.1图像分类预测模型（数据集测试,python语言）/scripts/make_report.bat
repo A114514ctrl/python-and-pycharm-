@@ -1,0 +1,15 @@
+@echo off
+chcp 65001 >nul
+set PYTHONIOENCODING=utf-8
+set "ROOT=%~dp0..\"
+if not exist "%ROOT%code\03_train.py" goto NOCODE
+cd /d "%ROOT%code"
+title Generate Word Report
+python 06_make_report.py
+echo.
+pause
+exit /b 0
+:NOCODE
+echo [ERROR] code folder not found. Please run this .bat inside the repository folder.
+pause
+exit /b 1
